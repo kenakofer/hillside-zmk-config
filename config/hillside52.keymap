@@ -25,6 +25,17 @@
 
 
 / {
+        behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -38,7 +49,7 @@
  */
                         bindings = <
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &kp  BSPC
-&kp  TAB      &kp  A        &kp  R        &mt LCTRL S   &kp  T        &kp  G                                                                         &kp  M        &kp  N        &mt LCTRL E   &kp  I        &kp  O        &kp  ENTER
+&kp  TAB      &kp  A        &kp  R        &kp S         &hm  LCTRL T  &kp  G                                                                        &kp  M        &hm RCTRL N   &kp  E        &kp  I        &kp  O        &kp  ENTER
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V        &kp  SQT                                           &kp  SLASH    &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  UP       &kp  SLASH
 &kp  C_MUTE   &kp  ESC      &kp  LCTRL                  &kp  LGUI     &kp  LALT     &kp  SPACE      &mo  LOWER          &lt RAISE Copy &sk  LSHIFT   &kp  LALT     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
