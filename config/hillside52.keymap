@@ -56,12 +56,11 @@
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SQT     &kp  BSPC
 &kp  TAB      &hm LGUI  A   &hm LALT  R   &hm LSHIFT S  &hm  LCTRL T  &kp  G                                                                         &kp  M        &hm RCTRL N   &hm RSHIFT  E &hm RALT  I   &hm RGUI O   &kp  ENTER
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V      &kp  DOT                                           &kp  SEMI     &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  UP       &kp  SLASH
-&kp  LCTRL    &kp  C_MUTE   &kp C_PLAY_PAUSE            &kp  LGUI     &mo CODE    &kp  SPACE    &mo  LOWER            &mlt RAISE Copy &sk  LSHIFT   &mo CODE     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
+&kp  LCTRL    &kp  C_MUTE   &kp C_PLAY_PAUSE            &kp  LGUI     &mo CODE    &kp  SPACE    &mlt LOWER Copy      &mlt RAISE Copy &sk  LSHIFT   &mo CODE     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
-
 
                 qwerty_layer {
 /* QWERTY
@@ -106,9 +105,9 @@
 /* RAISE
  */
                         bindings = <
-&kp  TILDE    &trans        &trans        &trans          &trans           &trans                                                         &kp PIPE      &kp  PLUS       &kp  LBRC        &kp  RBRC     &kp  DQT      &kp DEL
+&kp  TILDE    &kp DQT       &kp LBRC      &kp RBRC        &kp PLUS         &kp PIPE                                                       &kp PIPE      &kp  PLUS       &kp  LBRC        &kp  RBRC     &kp  DQT      &kp DEL
 &caps_word    &hm LGUI EXCL &hm LALT  AT  &hm LSHIFT HASH &hm LCTRL DOLLAR &kp PERCENT                                                    &kp  CARET    &hm RCTRL  AMPS &hm RSHIFT ASTRK &hm RALT LPAR &hm RGUI RPAR &trans
-&trans        &trans        &trans        &trans          &trans           &trans        &trans                             &trans        &trans        &kp  MINUS      &kp LT           &kp GT        &kp SEMI      &trans
+&kp QUESTION  &kp SEMI      &kp LT        &kp GT          &kp MINUS        &trans        &trans                             &trans        &trans        &kp  MINUS      &kp LT           &kp GT        &kp SEMI      &kp QUESTION
 &trans        &trans        &trans                        &trans           &trans        &trans   &mo  ADJ_L    &trans      &trans        &trans        &trans                           &trans        &trans        &trans
                         >;
 
@@ -121,7 +120,7 @@
                         bindings = <
 &kp  Copy     &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp   F6      &kp  F7      &kp   F8      &kp   F9      &kp  F10      &kp LC(BSPC)
 &kp  Cut      &kp  LGUI     &kp  LALT     &kp LSHIFT    &kp  LCTRL    &kp  F11                                                                       &kp   F12     &kp  LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &trans
-&trans        &kp  C_BRI_DN &kp  C_VOL_DN &kp  C_VOL_UP &kp  C_BRI_UP &kp  F13      &kp Undo                                           &kp  F14      &kp   HOME    &kp PG_UP    &kp   PG_DN   &kp   END     &trans        &trans
+&trans        &kp  C_BRI_DN &kp  C_VOL_DN &kp  C_VOL_UP &kp  C_BRI_UP &kp  F13      &kp Undo                                           &kp Redo      &kp  F14      &kp   HOME   &kp PG_UP     &kp   PG_DN   &kp   END     &trans
 &trans        &trans        &trans                      &trans        &trans        &trans        &trans                 &mo ADJ_L     &trans        &trans        &trans                     &trans        &trans        &trans
                         >;
 
