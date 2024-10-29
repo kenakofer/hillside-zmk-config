@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -73,8 +73,8 @@
                         bindings = <
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SQT     &kp  BSPC
 &kp  TAB      &hm LGUI  A   &hl CODE  R   &hm LSHIFT S  &hm  LCTRL T  &hm LALT G                                                                     &hm RALT M    &hm RCTRL N   &hm RSHIFT  E &hl CODE_FLIP  I   &hm RGUI O   &kp  ENTER
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V      &kp  DOT                                           &kp  SEMI     &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  UP       &kp  SLASH
-&kp  LCTRL    &kp  C_MUTE   &kp C_PLAY_PAUSE            &kp  LGUI     &mo CODE_FLIP    &kp  SPACE    &mlt LOWER Copy      &mlt RAISE Copy &mp  LSHIFT SPACE &mo CODE     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
+&kp  DEL      &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V      &mp LSHIFT DOT                                      &mp RGUI SEMI  &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  UP       &kp  SLASH
+&kp  LCTRL    &kp  C_MUTE   &kp C_PLAY_PAUSE            &trans        &mo CODE_FLIP    &hm LGUI SPACE &mlt LOWER Copy &mlt RAISE Copy &mp  LSHIFT SPACE &mo CODE     &trans                      &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
