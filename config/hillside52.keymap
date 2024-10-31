@@ -27,7 +27,7 @@
 #define Redo   LC(Y)
 
 &caps_word {
-        continue-list = <UNDERSCORE MINUS>;
+        continue-list = <UNDERSCORE MINUS BSPC LS(BSPC)>;
 };
 
 / {
