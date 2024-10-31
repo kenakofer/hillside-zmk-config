@@ -132,7 +132,7 @@
 &kp  GRAVE    &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                                                  &kp BSLH      &kp EQUAL      &kp LBKT      &kp RBKT     &kp DQT         &kp BSPC
 &trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                                                  &kp      N6   &kp       N7   &kp        N8 &kp           N9  &kp      N0  &trans
 &kp DOT       &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &trans                                            &trans       &trans        &kp UNDERSCORE &kp SLASH     &kp SEMI     &kp COLON    &trans
-&trans        &trans        &trans                      &trans        &trans        &trans        &trans                 &mo ADJ_L     &kp SPACE   &trans        &trans                       &trans       &trans       &trans
+&trans        &trans        &trans                      &kp MINUS     &trans        &trans        &trans                 &mo ADJ_L     &kp SPACE   &trans        &kp UNDERSCORE               &trans       &trans       &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -144,8 +144,8 @@
                         bindings = <
 &kp  TILDE    &kp DQT       &kp LBRC      &kp RBRC        &kp PLUS         &kp PIPE                                                       &kp PIPE      &kp  PLUS       &kp  LBRC        &kp  RBRC     &kp  DQT      &kp BSPC
 &caps_word    &kp      EXCL &kp       AT  &kp        HASH &kp       DOLLAR &kp      PERCENT                                               &kp      CARET &kp       AMPS &kp        ASTRK &kp           LPAR &kp      RPAR &trans
-&kp QUESTION  &kp SEMI      &kp LT        &kp GT          &kp MINUS        &trans        &trans                             &trans        &trans        &kp  MINUS      &kp QUESTION     &kp SEMI      &kp COLON     &trans
-&trans        &trans        &trans                        &trans           &trans        &trans   &mo  ADJ_L    &trans      &trans        &kp SPACE     &trans                           &trans        &trans        &trans
+&kp QUESTION  &kp SEMI      &kp LT        &kp GT          &kp MINUS        &trans        &trans                             &trans        &trans        &kp  MINUS      &kp QUESTION     &kp SEMI      &kp COLON     &kp QUESTION
+&trans        &trans        &trans                        &kp MINUS        &trans        &trans   &mo  ADJ_L    &trans      &trans        &kp SPACE     &kp UNDERSCORE                   &trans        &trans        &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
