@@ -26,12 +26,11 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
+&caps_word {
+        continue-list = <UNDERSCORE MINUS>;
+};
 
 / {
-        &caps_word {
-                continue-list = <UNDERSCORE MINUS>;
-        };
-
         behaviors {
         hl: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
