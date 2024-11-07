@@ -174,7 +174,7 @@
                         bindings = <
 &kp  TILDE    &kp DQT       &kp LBRC      &kp RBRC        &trans           &trans                                                         &trans         &trans         &kp  LBRC        &kp  RBRC     &kp  DQT      &kp BSPC
 &caps_word    &kp      EXCL &kp       AT  &kp        HASH &kp       DOLLAR &kp      PERCENT                                               &kp      CARET &kp       AMPS &kp        ASTRK &kp           LPAR &kp      RPAR &trans
-&kp COLON     &kp SEMI      &kp LT        &kp GT          &kp EQUAL        &tra ns        &trans                             &trans        &kp PIPE       &kp PLUS       &kp LT           &kp GT        &kp SEMI      &kp COLON
+&kp COLON     &kp SEMI      &kp LT        &kp GT          &kp EQUAL        &trans        &trans                             &trans        &kp PIPE       &kp PLUS       &kp LT           &kp GT        &kp SEMI      &kp COLON
 &trans        &trans        &trans                        &trans           &kp MINUS        &trans   &mo  LOWER    &trans      &trans        &kp MINUS   &trans                          &trans        &trans        &trans
                         >;
 
