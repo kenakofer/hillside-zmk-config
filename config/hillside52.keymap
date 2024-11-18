@@ -161,8 +161,8 @@
                         bindings = <
 &kp  GRAVE    &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                                                  &trans        &trans         &kp LBKT      &kp RBKT     &kp DQT      &kp BSPC
 &trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                                                  &kp      N6   &kp       N7   &kp        N8 &kp      N9  &kp      N0  &trans
-&trans        &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &trans                                            &trans       &kp BSLH      &kp PLUS       &kp COMMA     &kp DOT      &kp SLASH    &kp COLON
-&trans        &trans        &trans                      &mo ADJ_L     &kp MINUS     &trans        &trans                 &mo RAISE     &kp SPACE   &kp MINUS     &trans                       &trans       &trans       &trans
+&kp COLON     &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &trans                                            &trans       &kp BSLH      &kp PLUS       &kp COMMA     &kp DOT      &kp SLASH    &kp SEMICOLON
+&trans        &trans        &trans                      &mo ADJ_L     &kp MINUS     &trans        &kp SEMICOLON          &mo RAISE     &kp SPACE   &kp MINUS     &trans                       &trans       &trans       &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -174,8 +174,8 @@
                         bindings = <
 &kp  TILDE    &kp DQT       &kp LBRC      &kp RBRC        &trans           &trans                                                         &trans         &trans         &kp  LBRC        &kp  RBRC     &kp  DQT      &kp BSPC
 &caps_word    &kp      EXCL &kp       AT  &kp        HASH &kp       DOLLAR &kp      PERCENT                                               &kp      CARET &kp       AMPS &kp        ASTRK &kp           LPAR &kp      RPAR &trans
-&kp COLON     &kp SEMI      &kp LT        &kp GT          &kp EQUAL        &trans        &trans                             &trans        &kp PIPE       &kp PLUS       &kp LT           &kp GT        &kp QUESTION  &kp COLON
-&trans        &trans        &trans                        &trans           &kp MINUS        &trans   &mo  LOWER    &trans      &trans        &kp MINUS   &trans                          &trans        &trans        &trans
+&kp COLON     &kp SEMI      &kp LT        &kp GT          &kp EQUAL        &trans        &trans                             &trans        &kp PIPE       &kp PLUS       &kp LT           &kp GT        &kp QUESTION  &kp SEMICOLON
+&trans        &trans        &trans                        &trans           &kp MINUS        &trans   &mo  LOWER    &kp SEMICOLON  &trans  &kp MINUS   &trans                          &trans        &trans        &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
