@@ -13,6 +13,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
+#include <dt-bindings/zmk/dynamic_macro.h>
+
 #define COLEMK_L 0
 #define GAMING_L 1
 #define COLEMK_SIMPLE_L 2
