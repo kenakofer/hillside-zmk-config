@@ -233,7 +233,7 @@
 /* CODE
  */
                         bindings = <
-&kp  BSPC     &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                            &trans        &kp  C_BRI_DN &kp  C_VOL_UP &kp  C_VOL_DN &kp  C_BRI_UP &kp LC(BSPC)
+&kp  BSPC     &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                            &trans        &kp  C_BRI_DN &kp  C_VOL_DN &kp  C_VOL_UP &kp  C_BRI_UP &kp LC(BSPC)
 &kp  ENTER    &kp  LGUI     &mo  CODE     &kp LSHIFT    &kp  LCTRL    &kp  LALT                                                          &kp   RALT    &kp  LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &trans
 &kp DEL       &kp   F6      &kp  F7      &kp   F8      &kp   F9      &kp  F10      &kp F11                                &kp F12      &kp  F13      &kp   HOME   &kp PG_UP     &kp   PG_DN   &kp   END     &kp  C_VOL_UP
 &trans        &trans        &trans                      &trans        &mo MOUSE    &trans        &trans     &trans        &kp LSHIFT       &trans        &trans                     &trans        &trans        &kp  C_VOL_DN
@@ -246,7 +246,7 @@
 /* CODE_FLIP
  */
                         bindings = <
-&kp  BSPC     &kp  C_BRI_DN &kp  C_VOL_UP   &kp  C_VOL_DN &kp  C_BRI_UP       &kp  F5                                                            &kp F5        &kp F4        &kp F3        &kp F2        &kp F1        &kp LC(BSPC)
+&kp  BSPC     &kp  C_BRI_DN &kp  C_VOL_DN   &kp  C_VOL_UP &kp  C_BRI_UP       &kp  F5                                                            &kp F5        &kp F4        &kp F3        &kp F2        &kp F1        &kp LC(BSPC)
 &kp  ENTER    &kp  LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &kp  LALT                                                          &kp   RALT    &kp RCTRL    &kp RSHIFT    &mo  CODE_FLIP &kp  RGUI     &trans
 &trans       &kp   HOME   &kp PG_UP     &kp   PG_DN   &kp   END      &kp  F15      &kp F14                                &kp F11      &kp F10       &kp F9       &kp F8        &kp F7        &kp F6        &trans
 &trans        &trans        &trans                      &trans        &trans        &trans        &trans     &trans        &trans        &mo MOUSE    &trans                     &trans        &trans        &trans
@@ -278,8 +278,8 @@
  */
                         bindings = <
 &to COLEMK_L  &to  QWERTY_L &to  GAMING_L &to  COLEMK_L &to COLEMK_SIMPLE_L &none                                                                       &none             &kp PRINTSCREEN    &none         &ext_power EP_OFF  &ext_power EP_ON &none
-&none         &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none           &none            &none
-&bootloader   &sys_reset    &none         &out OUT_USB  &out OUT_BLE  &none         &bt BT_CLR                                         &none            &none             &none              &none            &none           &none            &trans
+&none         &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &out OUT_USB  &none            &none           &none            &none
+&bootloader   &sys_reset    &none         &out OUT_USB  &out OUT_BLE  &none         &bt BT_CLR                                         &none            &none             &out OUT_BLE              &none            &none           &none            &trans
 &dm DM_PLY 0  &dm DM_STP 0 &dm DM_REC 0                 &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                              &kp  RCTRL      &none            &none
                         >;
 
