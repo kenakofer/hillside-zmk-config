@@ -259,10 +259,10 @@
 /* MOUSE
  */
                         bindings = <
-&trans         &trans &trans &trans &trans &trans                                                                       &trans             &trans    &trans         &trans  &trans &trans
-&trans         &mkp RCLK &msc SCRL_UP &msc SCRL_DOWN &mkp LCLK &trans                                                                     &trans             &mmv MOVE_LEFT   &mmv MOVE_UP &mmv MOVE_DOWN     &mmv MOVE_RIGHT            &trans
-&trans         &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT &trans         &trans                                         &trans            &trans             &trans              &trans            &trans           &trans            &trans
-&trans         &trans         &trans                      &trans        &trans        &trans        &trans                 &trans        &kp RSHIFT           &trans            &kp RCTRL                              &trans      &trans            &trans
+&trans         &mmv MOVE_LEFT   &mmv MOVE_UP &mmv MOVE_DOWN     &mmv MOVE_RIGHT &trans                                                               &trans             &trans    &trans         &trans  &trans &trans
+&trans         &mkp RCLK &msc SCRL_UP &msc SCRL_DOWN &mkp LCLK &trans                                                                                &mkp LCLK  &mmv MOVE_LEFT   &mmv MOVE_UP &mmv MOVE_DOWN     &mmv MOVE_RIGHT            &trans
+&trans         &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT &trans         &trans                                         &trans      &trans             &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT            &trans
+&trans         &trans         &trans                      &trans        &trans        &trans        &trans                 &trans        &kp RSHIFT  &trans            &kp RCTRL                              &trans      &trans            &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
