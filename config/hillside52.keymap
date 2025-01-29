@@ -35,7 +35,7 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
-#define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 1600                     /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
@@ -44,6 +44,13 @@
 #define MOVE_DOWN MOVE_Y(U_MOUSE_MOVE_MAX)
 #define MOVE_LEFT MOVE_X(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_X(U_MOUSE_MOVE_MAX)
+
+
+#define U_MOUSE_MOVE_SLOW_MAX 500                     /* <--- New max speed setting (default: 600) */
+#define MOVE_UP_SLOW MOVE_Y(-U_MOUSE_MOVE_SLOW_MAX)
+#define MOVE_DOWN_SLOW MOVE_Y(U_MOUSE_MOVE_SLOW_MAX)
+#define MOVE_LEFT_SLOW MOVE_X(-U_MOUSE_MOVE_SLOW_MAX)
+#define MOVE_RIGHT_SLOW MOVE_X(U_MOUSE_MOVE_SLOW_MAX)
 
 #define U_MOUSE_SCRL_MAX 15                    /* <--- New max speed setting (default: 10) */
 #undef SCRL_UP
@@ -63,7 +70,7 @@
         continue-list = <UNDERSCORE MINUS BSPC LS(BSPC)>;
 };
 &mmv {
-	time-to-max-speed-ms = <150>;             /* <--- How long time until max speed is reached (default: 300) */
+	time-to-max-speed-ms = <300>;             /* <--- How long time until max speed is reached (default: 300) */
 };
 
 / {
@@ -260,8 +267,8 @@
  */
                         bindings = <
 &trans         &mmv MOVE_LEFT   &mmv MOVE_UP &mmv MOVE_DOWN     &mmv MOVE_RIGHT &trans                                                               &trans             &trans    &trans         &trans  &trans &trans
-&trans         &mkp RCLK &msc SCRL_UP &msc SCRL_DOWN &mkp LCLK &trans                                                                                &mkp LCLK  &mmv MOVE_LEFT   &mmv MOVE_UP &mmv MOVE_DOWN     &mmv MOVE_RIGHT            &trans
-&trans         &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT &trans         &trans                                         &trans      &trans             &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT            &trans
+&trans         &mkp RCLK &msc SCRL_UP &msc SCRL_DOWN &mkp LCLK &trans                                                                                &mkp LCLK &mmv MOVE_LEFT_SLOW &mmv MOVE_UP_SLOW &mmv MOVE_DOWN_SLOW &mmv MOVE_RIGHT_SLOW &trans
+&trans         &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT &trans         &trans                                         &trans      &trans             &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT           &trans
 &trans         &trans         &trans                      &trans        &trans        &trans        &trans                 &trans        &kp RSHIFT  &trans            &kp RCTRL                              &trans      &trans            &trans
                         >;
 
