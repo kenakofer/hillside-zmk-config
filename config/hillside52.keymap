@@ -74,6 +74,18 @@
 };
 
 / {
+	macros {
+		ff_tab_search: ff_tab_search {
+		    compatible = "zmk,behavior-macro";
+		    #binding-cells = <0>;
+		    bindings
+			= <&macro_press &kp LCTRL>
+			, <&macro_tap &kp T>
+			, <&macro_release &kp LCTRL>
+			, <&macro_tap &kp PERCENT &kp SPACE>
+			;
+		};
+	};
         behaviors {
         hl: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
@@ -241,7 +253,7 @@
  */
                         bindings = <
 &kp  BSPC     &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                            &trans        &kp  C_BRI_DN &kp  C_VOL_DN &kp  C_VOL_UP &kp  C_BRI_UP &kp LC(BSPC)
-&kp  ENTER    &kp  LGUI     &mo  CODE     &kp LSHIFT    &kp  LCTRL    &kp  LALT                                                          &kp   RALT    &kp  LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &trans
+&kp  ENTER    &kp  LGUI     &mo  CODE     &kp LSHIFT    &kp  LCTRL    &kp  LALT                                                          &macro ff_tab_search  &kp  LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &trans
 &kp DEL       &kp   F6      &kp  F7      &kp   F8      &kp   F9      &kp  F10      &kp F11                                &kp F12      &kp  F13      &kp   HOME   &kp PG_UP     &kp   PG_DN   &kp   END     &kp  C_VOL_UP
 &trans        &trans        &trans                      &trans        &mo MOUSE    &trans        &trans     &trans        &kp LSHIFT       &trans        &trans                     &trans        &trans        &kp  C_VOL_DN
                         >;
