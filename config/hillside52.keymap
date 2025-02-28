@@ -89,12 +89,21 @@
 		    compatible = "zmk,behavior-macro";
 		    #binding-cells = <0>;
 		    bindings
-			= <&macro_press &kp LALT>
+			= <&macro_tap &mkp RCLK>
+			, <&macro_tap &kp ESC>
+
+			, <&macro_press &kp LALT>
+			, <&macro_tap &kp SPACE>
+			, <&macro_release &kp LALT>
+			, <&macro_tap &kp R>
+
+			, <&macro_press &kp LALT>
 			, <&macro_tap &kp SPACE>
 			, <&macro_release &kp LALT>
 			, <&macro_tap &kp S &kp UP &kp LEFT>
+
     			, <&macro_pause_for_release>
-			, <&macro_tap &kp ENTER>
+			, <&macro_tap &mkp LCLK>
 			;
 		};
 		win_move: win_move {
@@ -103,9 +112,16 @@
 		    bindings
 			= <&macro_press &kp LALT>
 			, <&macro_tap &kp SPACE>
+
+			, <&macro_press &kp LALT>
+			, <&macro_tap &kp SPACE>
+			, <&macro_release &kp LALT>
+			, <&macro_tap &kp R>
+
 			, <&macro_release &kp LALT>
 			, <&macro_tap &kp M &kp DOWN>
-    			, <&macro_pause_for_release>
+
+			, <&macro_pause_for_release>
 			, <&macro_tap &kp ENTER>
 			;
 		};
