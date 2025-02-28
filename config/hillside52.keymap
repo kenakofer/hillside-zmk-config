@@ -85,17 +85,30 @@
 			, <&macro_tap &kp PERCENT &kp SPACE>
 			;
 		};
+		win_up: win_up {
+		    compatible = "zmk,behavior-macro";
+		    #binding-cells = <0>;
+		    bindings
+			= <&macro_press &kp LGUI>
+			, <&macro_tap &kp UP>
+			, <&macro_release &kp LGUI>
+			;
+		};
+		win_down: win_down {
+		    compatible = "zmk,behavior-macro";
+		    #binding-cells = <0>;
+		    bindings
+			= <&macro_press &kp LGUI>
+			, <&macro_tap &kp DOWN>
+			, <&macro_release &kp LGUI>
+			;
+		};
 		win_resize: win_resize {
 		    compatible = "zmk,behavior-macro";
 		    #binding-cells = <0>;
 		    bindings
 			= <&macro_tap &mkp RCLK>
 			, <&macro_tap &kp ESC>
-
-			, <&macro_press &kp LALT>
-			, <&macro_tap &kp SPACE>
-			, <&macro_release &kp LALT>
-			, <&macro_tap &kp R>
 
 			, <&macro_press &kp LALT>
 			, <&macro_tap &kp SPACE>
@@ -110,19 +123,16 @@
 		    compatible = "zmk,behavior-macro";
 		    #binding-cells = <0>;
 		    bindings
-			= <&macro_press &kp LALT>
-			, <&macro_tap &kp SPACE>
+			= <&macro_tap &mkp RCLK>
+			, <&macro_tap &kp ESC>
 
 			, <&macro_press &kp LALT>
 			, <&macro_tap &kp SPACE>
 			, <&macro_release &kp LALT>
-			, <&macro_tap &kp R>
-
-			, <&macro_release &kp LALT>
 			, <&macro_tap &kp M &kp DOWN>
 
 			, <&macro_pause_for_release>
-			, <&macro_tap &kp ENTER>
+			, <&macro_tap &mkp LCLK>
 			;
 		};
 	};
@@ -318,7 +328,7 @@
 /* MOUSE
  */
                         bindings = <
-&kp BSPC       &kp  C_BRI_DN &kp  C_VOL_DN   &kp  C_VOL_UP &kp  C_BRI_UP &trans                                                               &trans &mmv MOVE_LEFT_SLOW &mmv MOVE_UP_SLOW &mmv MOVE_DOWN_SLOW &mmv MOVE_RIGHT_SLOW &trans
+&kp BSPC       &kp  C_BRI_DN &kp  C_VOL_DN   &kp  C_VOL_UP &kp  C_BRI_UP &win_up                                                               &win_down &mmv MOVE_LEFT_SLOW &mmv MOVE_UP_SLOW &mmv MOVE_DOWN_SLOW &mmv MOVE_RIGHT_SLOW &trans
 &kp ENTER      &mkp RCLK &msc SCRL_UP &msc SCRL_DOWN &mkp LCLK &win_move                                                                                &mkp LCLK &mmv MOVE_LEFT   &mmv MOVE_UP &mmv MOVE_DOWN     &mmv MOVE_RIGHT &trans
 &kp DEL         &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT &win_resize         &trans                                         &kp RALT      &trans             &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT           &trans
 &trans         &trans         &trans                      &trans        &trans        &trans        &trans                 &kp RCTRL        &kp RSHIFT  &mo MOUSE            &kp RCTRL                              &trans      &trans            &trans
