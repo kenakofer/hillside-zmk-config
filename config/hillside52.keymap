@@ -148,6 +148,7 @@
             };
         hls: homerow_layer_slow {
             compatible = "zmk,behavior-hold-tap";
+	    retro-tap;  /* Trigger tap behavior if no other key was pressed while holding. This is fine for layer switch, but might not work well for mods */
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             require-prior-idle-ms = <100>;
