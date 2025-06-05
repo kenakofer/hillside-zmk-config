@@ -327,7 +327,7 @@
 &kp  TILDE    &kp DQT       &kp LBRC      &kp RBRC        &trans           &trans                                                         &trans         &trans         &kp  LBRC    &kp  RBRC     &kp  DQT      &kp BSPC
 &caps_word    &kp      EXCL &kp       AT  &kp        HASH &kp       DOLLAR &kp      PERCENT                                               &kp      CARET &kp       AMPS &kp    ASTRK &kp           LPAR &kp      RPAR &trans
 &kp COLON     &kp SEMI      &kp LT        &kp GT          &kp EQUAL        &trans        &trans                             &kp PIPE      &kp BSLH       &kp PLUS       &kp LT       &kp GT        &kp QUESTION  &kp SEMICOLON
-&trans        &trans        &trans                        &trans           &kp MINUS        &trans   &mo ADJ_L  &trans  &trans        &kp MINUS   &trans                             &trans        &trans        &trans
+&trans        &trans        &trans                        &trans           &kp MINUS        &trans   &mo ADJ_L  &trans  &trans        &kp MINUS   &CAPSLOCK                             &trans        &trans        &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
