@@ -222,8 +222,8 @@
                         bindings = <
 &kp  ESC      &kp N1        &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp  Y        &kp  C_BRI_DN        &kp  C_VOL_DN        &kp  C_VOL_UP        &kp  C_BRI_UP        &kp  BSPC
 &kp  TAB      &kp       A   &kp  W        &kp  S        &kp  D        &kp  F                                                                         &kp  G        &kp  LEFT     &kp  UP       &kp  DOWN     &kp RIGHT     &kp  ENTER
-&kp  T        &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B  &kp  R                                                   &kp RSHFT    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RCTRL
-&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp Q       &kp E &kp SPACE &kp LSHFT                        &mlt RAISE ESC  &mo LOWER &kp H &mo QWERTY_L                &kp  LEFT     &kp  DOWN     &kp  RIGHT
+&kp  T        &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B  &kp  R                                                   &kp RSHFT    &kp  N        &kp  M        &kp  H    &kp  DOT      &kp  UP       &kp  RCTRL
+&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp Q       &kp E &kp SPACE &kp LSHFT                        &mlt RAISE ESC  &mo LOWER &kp RGUI &mo QWERTY_L                &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
