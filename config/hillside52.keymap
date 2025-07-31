@@ -275,7 +275,7 @@
 &kp  LS(ESC) &kp  LS(Q)    &kp  LS(W)    &kp  LS(F)    &kp  LS(P)    &kp  LS(B)                                                                     &kp  LS(J)    &kp  LS(L)    &kp  LS(U)    &kp  LS(Y)    &kp  DQT     &kp  LS(BSPC)
 &kp  LS(TAB) &hm LALT LS(A)    &hl CODE LS(R) &kp LS(S)     &hm  LCTRL LS(T) &hm LGUI LS(G)                                                                 &hm RGUI LS(M) &hm RCTRL LS(N) &hm RSHIFT  LS(E) &hls CODE_FLIP LS(I) &hm RALT LS(O)    &kp  LS(ENTER)
 &kp  LS(DEL)  &kp  LS(Z)    &kp  LS(X)    &kp  LS(C)    &kp  LS(D)    &kp  LS(V)  &mp LSHIFT LS(Paste)                                &kp LS(LGUI) &kp  LS(K)    &kp  LS(H)    &kp  LT       &kp  GT       &kp QUESTION &kp  LS(UP) 
-&kp  LS(LCTRL) &trans   &trans            &kp LS(EQUAL)    &mlt MOUSE UNDERSCORE &hm LS(SPACE) &mlt LOWER LS(Copy) &mlt RAISE LS(Copy) &mp LSHIFT LS(SPACE) &mlt CODE MINUS &trans &kp LS(LEFT) &trans &kp LS(RIGHT)
+&kp  LS(LCTRL) &trans   &trans            &kp LS(EQUAL)    &mlt MOUSE UNDERSCORE &kp LS(SPACE) &mlt LOWER LS(Copy) &mlt RAISE LS(Copy) &mp LSHIFT LS(SPACE) &mlt CODE MINUS &trans &kp LS(LEFT) &trans &kp LS(RIGHT)
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
