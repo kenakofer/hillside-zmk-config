@@ -210,7 +210,7 @@
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SQT     &kp  BSPC
 &kp  TAB      &hm LALT  A   &hl CODE  R  &hm LSHIFT S  &hm  LCTRL T  &hm LGUI G                                                                     &hm RGUI M    &hm RCTRL N   &hm RSHIFT  E &hl CODE_FLIP I   &hm RALT O   &kp  ENTER
 &kp  DEL      &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V      &mp LSHIFT Paste                                    &kp RGUI &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  UP
-&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp EQUAL &mlt MOUSE UNDERSCORE &hm LGUI SPACE &mlt LOWER Copy &mlt RAISE Copy  &mlt SHIFT_L SPACE &mlt CODE MINUS &mpcaps RCTRL 0      &kp  LEFT     &kp  SPACE     &kp  RIGHT
+&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp EQUAL &mlt MOUSE UNDERSCORE &kp SPACE &mlt LOWER Copy &mlt RAISE Copy  &mlt SHIFT_L SPACE &mlt CODE MINUS &mpcaps RCTRL 0      &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -223,7 +223,7 @@
 &kp  ESC      &kp N1        &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp  Y        &kp  C_BRI_DN        &kp  C_VOL_DN        &kp  C_VOL_UP        &kp  C_BRI_UP        &kp  BSPC
 &kp  TAB      &kp       A   &kp  W        &kp  S        &kp  D        &kp  F                                                                         &kp  G        &kp  LEFT     &kp  UP       &kp  DOWN     &kp RIGHT     &kp  ENTER
 &kp  T        &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B  &kp  R                                                   &kp RSHFT    &kp  N        &kp  M        &kp  H    &kp  DOT      &kp  UP       &kp  RCTRL
-&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp Q       &kp E &kp SPACE &kp LSHFT                        &mlt RAISE ESC  &mo LOWER &kp RGUI &mo QWERTY_L                &kp  LEFT     &kp  DOWN     &kp  RIGHT
+&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp Q       &kp E &kp SPACE &kp LSHFT                        &mlt RAISE ESC  &mo LOWER &kp RGUI &mo QWERTY_L                &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -236,7 +236,7 @@
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SQT     &kp  BSPC
 &kp  TAB      &kp       A   &kp       R   &kp        S  &kp        T  &kp      G                                                                     &kp      M    &kp       N   &kp         E &kp            I   &kp      O   &kp  ENTER
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V      &mp LSHIFT Paste                                    &mpcaps RGUI 0 &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  UP
-&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp EQUAL &mlt MOUSE UNDERSCORE  &kp      SPACE &mlt LOWER Copy &mlt RAISE Copy  &kp LSHIFT         &mlt CODE MINUS &kp RCTRL           &kp  LEFT     &kp  SPACE     &kp  RIGHT
+&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp EQUAL &mlt MOUSE UNDERSCORE  &kp      SPACE &mlt LOWER Copy &mlt RAISE Copy  &kp LSHIFT         &mlt CODE MINUS &kp RCTRL           &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -249,7 +249,7 @@
 &kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
 &kp  TAB      &kp       A   &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp      SEMI &kp  ENTER
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  DOT                                           &kp  SLASH    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RCTRL
-&kp  LCTRL    &to  GAMING_L                 &to COLEMK_L &kp  LGUI  &mo MOUSE    &kp  SPACE    &mo  LOWER            &lt RAISE Copy  &sk  LSHIFT   &mo CODE     &kp  RGUI                   &kp  LEFT     &kp  SPACE     &kp  RIGHT
+&kp  LCTRL    &to  GAMING_L                 &to COLEMK_L &kp  LGUI  &mo MOUSE    &kp  SPACE    &mo  LOWER            &lt RAISE Copy  &sk  LSHIFT   &mo CODE     &kp  RGUI                   &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -262,7 +262,7 @@
 &kp  GRAVE    &kp  SQT      &kp  COMMA    &kp  DOT      &kp  P        &kp  Y                                                                         &kp  F        &kp  G        &kp  C        &kp  R        &kp  L        &kp  BSPC
 &kp  TAB      &kp  A        &kp  O        &kp  E        &kp  U        &kp  I                                                                         &kp  D        &kp  H        &kp  T        &kp  N        &kp  S        &kp  ENTER
 &kp  LSHFT    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  Z                                             &kp  SLASH    &kp  B        &kp  M        &kp  W        &kp  V        &kp  UP       &kp  RCTRL
-&kp  LCTRL    &to  GAMING_L                 &to COLEMK_L &kp  LGUI  &mo MOUSE    &kp  SPACE    &mo  LOWER            &lt RAISE Copy  &sk  LSHIFT   &mo CODE     &kp  RGUI                   &kp  LEFT     &kp  SPACE     &kp  RIGHT
+&kp  LCTRL    &to  GAMING_L                 &to COLEMK_L &kp  LGUI  &mo MOUSE    &kp  SPACE    &mo  LOWER            &lt RAISE Copy  &sk  LSHIFT   &mo CODE     &kp  RGUI                   &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -275,7 +275,7 @@
 &kp  LS(ESC) &kp  LS(Q)    &kp  LS(W)    &kp  LS(F)    &kp  LS(P)    &kp  LS(B)                                                                     &kp  LS(J)    &kp  LS(L)    &kp  LS(U)    &kp  LS(Y)    &kp  DQT     &kp  LS(BSPC)
 &kp  LS(TAB) &hm LALT LS(A)    &hl CODE LS(R) &kp LS(S)     &hm  LCTRL LS(T) &hm LGUI LS(G)                                                                 &hm RGUI LS(M) &hm RCTRL LS(N) &hm RSHIFT  LS(E) &hls CODE_FLIP LS(I) &hm RALT LS(O)    &kp  LS(ENTER)
 &kp  LS(DEL)  &kp  LS(Z)    &kp  LS(X)    &kp  LS(C)    &kp  LS(D)    &kp  LS(V)  &mp LSHIFT LS(Paste)                                &kp LS(LGUI) &kp  LS(K)    &kp  LS(H)    &kp  LT       &kp  GT       &kp QUESTION &kp  LS(UP) 
-&kp  LS(LCTRL) &trans   &trans            &kp LS(EQUAL)    &mlt MOUSE UNDERSCORE &hm LGUI LS(SPACE) &mlt LOWER LS(Copy) &mlt RAISE LS(Copy) &mp LSHIFT LS(SPACE) &mlt CODE MINUS &trans &kp LS(LEFT) &kp LS(SPACE) &kp LS(RIGHT)
+&kp  LS(LCTRL) &trans   &trans            &kp LS(EQUAL)    &mlt MOUSE UNDERSCORE &hm LS(SPACE) &mlt LOWER LS(Copy) &mlt RAISE LS(Copy) &mp LSHIFT LS(SPACE) &mlt CODE MINUS &trans &kp LS(LEFT) &trans &kp LS(RIGHT)
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -285,10 +285,10 @@
 /* CODE
  */
                         bindings = <
-&kp  BSPC     &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                            &trans        &kp  C_BRI_DN &kp  C_VOL_DN &kp  C_VOL_UP &kp  C_BRI_UP &kp LC(BSPC)
-&kp  ENTER    &kp  LALT     &mo  CODE     &kp LSHIFT    &kp  LCTRL    &kp  LGUI                                                          &ff_tab_search  &kp  LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &trans
-&kp DEL       &kp   F6      &kp  F7      &kp   F8      &kp   F9      &kp  F10      &kp F11                                &kp F12      &kp  F13      &kp   HOME   &kp PG_UP     &kp   PG_DN   &kp   END     &kp  C_VOL_UP
-&trans        &trans        &trans                      &trans        &mo MOUSE    &kp C_PLAY_PAUSE        &kp C_MUTE    &trans        &kp LSHIFT       &trans        &trans                     &trans        &trans        &kp  C_VOL_DN
+&trans        &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                            &kp C_MUTE        &kp  C_BRI_DN &kp  C_VOL_DN &kp  C_VOL_UP &kp  C_BRI_UP &kp LC(BSPC)
+&trans        &kp  LALT     &mo  CODE     &kp LSHIFT    &kp  LCTRL    &kp  LGUI                                                          &ff_tab_search  &kp  LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &trans
+&trans        &kp   F6      &kp  F7      &kp   F8      &kp   F9      &kp  F10      &kp F11                                &kp F12      &kp  F13      &kp   HOME   &kp PG_UP     &kp   PG_DN   &kp   END     &trans
+&trans        &trans        &trans                      &trans        &mo MOUSE    &trans     &trans        &trans        &kp LSHIFT       &trans        &trans                     &trans        &trans        &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -298,10 +298,10 @@
 /* CODE_FLIP
  */
                         bindings = <
-&kp  BSPC     &kp  C_BRI_DN &kp  C_VOL_DN   &kp  C_VOL_UP &kp  C_BRI_UP       &kp  F5                                                            &kp F5        &kp F4        &kp F3        &kp F2        &kp F1        &kp LC(BSPC)
+&kp  BSPC     &kp  C_BRI_DN &kp  C_VOL_DN   &kp  C_VOL_UP &kp  C_BRI_UP   &kp C_MUTE                                                            &kp F5        &kp F4        &kp F3        &kp F2        &kp F1        &kp LC(BSPC)
 &kp  ENTER    &kp  LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &kp  LALT                                                          &kp   RGUI    &kp RCTRL    &kp RSHIFT    &mo  CODE_FLIP &kp  RALT     &trans
 &trans       &kp   HOME   &kp PG_UP     &kp   PG_DN   &kp   END      &kp  F15      &kp F14                                &kp F11      &kp F10       &kp F9       &kp F8        &kp F7        &kp F6        &trans
-&trans        &trans        &trans                      &trans        &trans        &trans        &trans     &trans        &trans        &mo MOUSE    &trans                     &trans        &trans        &trans
+&trans       &kp C_PLAY_PAUSE &trans                   &trans        &trans        &trans        &trans     &trans        &trans        &mo MOUSE    &trans                     &trans        &trans        &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -313,8 +313,8 @@
                         bindings = <
 &kp  GRAVE    &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                                                  &trans        &trans         &kp LBKT      &kp RBKT     &kp DQT      &kp BSPC
 &trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                                                  &kp      N6   &kp       N7   &kp        N8 &kp      N9  &kp      N0  &trans
-&kp COLON     &kp SEMI      &kp N7        &kp N8        &kp N9        &kp N0        &trans                                            &kp PIPE       &kp BSLH      &kp PLUS       &kp COMMA     &kp DOT      &kp SLASH    &kp SEMICOLON
-&trans        &trans        &trans                      &mo ADJ_L     &kp UNDERSCORE &trans        &trans          &mo RAISE      &kp SPACE   &kp UNDERSCORE     &trans                   &trans       &trans       &trans
+&kp COLON     &kp SEMI      &kp N7        &kp N8        &kp N9        &kp N0        &trans                                            &kp PIPE       &kp BSLH      &kp PLUS       &kp COMMA     &kp DOT      &kp SLASH    &trans
+&trans        &kp C_PLAY_PAUSE &trans                      &mo ADJ_L     &kp UNDERSCORE &trans        &trans          &mo RAISE      &kp SPACE   &kp UNDERSCORE     &trans                   &trans       &trans       &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -326,7 +326,7 @@
                         bindings = <
 &kp  TILDE    &kp DQT       &kp LBRC      &kp RBRC        &trans           &trans                                                         &trans         &trans         &kp  LBRC    &kp  RBRC     &kp  DQT      &kp BSPC
 &caps_word    &kp      EXCL &kp       AT  &kp        HASH &kp       DOLLAR &kp      PERCENT                                               &kp      CARET &kp       AMPS &kp    ASTRK &kp           LPAR &kp      RPAR &trans
-&kp COLON     &kp SEMI      &kp LT        &kp GT          &kp EQUAL        &trans        &trans                             &kp PIPE      &kp BSLH       &kp PLUS       &kp LT       &kp GT        &kp QUESTION  &kp SEMICOLON
+&kp COLON     &kp SEMI      &kp LT        &kp GT          &kp EQUAL        &trans        &trans                             &kp PIPE      &kp BSLH       &kp PLUS       &kp LT       &kp GT        &kp QUESTION  &trans
 &trans        &trans        &trans                        &trans           &kp MINUS        &trans   &mo ADJ_L  &trans  &trans        &kp MINUS   &kp CAPSLOCK                       &trans        &trans        &trans
                         >;
 
@@ -340,7 +340,7 @@
 &kp BSPC       &kp  C_BRI_DN &kp  C_VOL_DN   &kp  C_VOL_UP &kp  C_BRI_UP &win_up                                                               &win_down &mmv MOVE_LEFT_SLOW &mmv MOVE_UP_SLOW &mmv MOVE_DOWN_SLOW &mmv MOVE_RIGHT_SLOW &trans
 &kp ENTER      &mkp RCLK &msc SCRL_UP &msc SCRL_DOWN &mkp LCLK &win_move                                                                                &mkp LCLK &mmv MOVE_LEFT   &mmv MOVE_UP &mmv MOVE_DOWN     &mmv MOVE_RIGHT &trans
 &kp DEL         &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT &win_resize         &trans                                         &kp RALT      &trans             &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_DOWN  &msc SCRL_RIGHT           &trans
-&trans         &trans         &trans                      &trans        &trans        &trans        &trans                 &kp RCTRL        &kp RSHIFT  &mo MOUSE            &kp RCTRL                              &trans      &trans            &trans
+&trans         &kp C_PLAY_PAUSE &trans                      &trans        &trans        &trans        &trans                 &kp RCTRL        &kp RSHIFT  &mo MOUSE            &kp RCTRL                              &trans      &trans            &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
