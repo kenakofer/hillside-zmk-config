@@ -208,7 +208,7 @@
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SQT     &kp  BSPC
 &kp  TAB      &hm LALT  A   &hl CODE  R  &hm LSHIFT S  &hm  LCTRL T  &hm LGUI G                                                                     &hm RGUI M    &hm RCTRL N   &hm RSHIFT  E &hl CODE_FLIP I   &hm RALT O   &kp  ENTER
 &kp  DEL      &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V      &mp LSHIFT Paste                                    &kp RGUI &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  COLON
-&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp EQUAL &mlt MOUSE UNDERSCORE &kp SPACE &mlt NUMBER_L Copy &mlt ADJ_L Copy  &hm RSHIFT SPACE &mlt CODE MINUS &mpcaps RCTRL 0      &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
+&kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp EQUAL &mlt MOUSE UNDERSCORE &kp SPACE &mlt NUMBER_L Copy &mlt NUMBER_L Copy  &hm RSHIFT SPACE &mlt CODE MINUS &mpcaps RCTRL 0      &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -299,7 +299,7 @@
 &kp  TILDE    &kp EXCL      &kp LBKT        &kp RBKT      &kp MINUS    &kp PLUS                                                                  &kp CARET        &kp AMPS         &kp LBRC      &kp RBRC     &kp DQT      &trans
 &trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                                                  &kp      N6   &kp       N7   &kp        N8 &kp      N9  &kp      N0  &trans
 &kp LT     &kp GT         &kp LPAR        &kp RPAR        &kp SEMI        &kp PERCENT        &kp GRAVE                                            &kp BSLH       &kp ASTRK      &kp EQUAL       &kp COMMA     &kp DOT      &kp SLASH    &kp COLON
-&trans        &kp C_PLAY_PAUSE &kp AT                      &kp HASH     &kp MINUS &trans        &trans          &mo NUMBER_L      &hm RSHIFT SPACE   &kp UNDERSCORE     &trans                   &kp LT       &trans       &kp GT
+&trans        &kp C_PLAY_PAUSE &kp AT                      &kp HASH     &kp MINUS &trans        &mo ADJ_L          &mo ADJ_L      &hm RSHIFT SPACE   &kp UNDERSCORE     &trans                   &kp LT       &trans       &kp GT
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
