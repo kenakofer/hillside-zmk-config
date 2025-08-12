@@ -153,9 +153,9 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
             };
-	hlf: homerow_layer_fast {
+        hlf: homerow_layer_fast {
             compatible = "zmk,behavior-hold-tap";
-	    retro-tap;  /* Trigger tap behavior if no other key was pressed while holding. This is fine for layer switch, but might not work well for mods. This makes a short tapping term more usable */
+            retro-tap;  /* Trigger tap behavior if no other key was pressed while holding. This is fine for layer switch, but might not work well for mods. This makes a short tapping term more usable */
             #binding-cells = <2>;
             tapping-term-ms = <100>;
             require-prior-idle-ms = <50>;
@@ -170,6 +170,15 @@
             require-prior-idle-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            };
+        hmf: homerow_mods_fast {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <50>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
             };
         mpcaps: mod_preferred_caps_word {
@@ -206,7 +215,7 @@
  */
                         bindings = <
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SQT     &kp  BSPC
-&kp  TAB      &hm LALT  A   &hl CODE  R  &hm LSHIFT S  &hm  LCTRL T  &hm LGUI G                                                                     &hm RGUI M    &hm RCTRL N   &hm RSHIFT  E &hl NUMBER_L I   &hm RALT O   &kp  ENTER
+&kp  TAB      &hm LALT  A   &hl CODE  R  &hm LSHIFT S  &hm  LCTRL T  &hm LGUI G                                                                     &hm RGUI M    &hm RCTRL N   &hmf RSHIFT  E &hlf NUMBER_L I   &hm RALT O   &kp  ENTER
 &kp  DEL      &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V      &mp LSHIFT Paste                                    &kp RGUI &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  PLUS
 &kp  LCTRL    &to  GAMING_L   &to COLEMK_L            &kp EQUAL &mlt MOUSE UNDERSCORE &kp SPACE &mlt NUMBER_L Copy &mlt NUMBER_L Copy  &mp RSHIFT SPACE &mlt CODE MINUS &mpcaps RCTRL 0      &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
@@ -297,7 +306,7 @@
  */
                         bindings = <
 &kp  TILDE    &kp LBRC      &kp LBKT        &kp RBKT      &kp RBRC    &kp PERCENT                                                                  &kp CARET        &kp AMPS         &kp ASTRK      &kp DOLLAR     &kp DQT      &trans
-&trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                                                  &hm RGUI N6    &hm RCTRL N7   &hm RSHIFT  N8 &kp N9   &hm RALT N0  &trans
+&trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                                                  &hm RGUI N6    &hm RCTRL N7   &hmf RSHIFT  N8 &kp N9   &hm RALT N0  &trans
 &kp LT     &kp GT         &kp LPAR        &kp RPAR        &kp SEMI        &kp EXCL        &kp GRAVE                                            &kp BSLH       &kp COLON      &kp EQUAL       &kp COMMA     &kp DOT      &kp MINUS    &kp PLUS
 &trans        &kp C_PLAY_PAUSE &kp AT                      &kp HASH     &kp MINUS &trans        &mo ADJ_L          &mo ADJ_L      &mp RSHIFT SPACE   &kp UNDERSCORE     &trans                   &kp LT       &trans       &kp GT
                         >;
