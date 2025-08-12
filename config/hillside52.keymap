@@ -161,6 +161,22 @@
             flavor = "hold-preferred";
             bindings = <&kp>, <&caps_word>;
             };
+        mp: mod_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+            };
+        mlt: my_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+            };
         };
 
         keymap {
@@ -177,8 +193,8 @@
 &kp  DEL      &kp  Z        &kp  X        &kp  C
 &kp  D        &kp  V      &hm LSHIFT Paste                                    &kp RGUI &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  PLUS
 &kp  LCTRL    &to  GAMING_L   &to COLEMK_L
-&kp EQUAL &hl MOUSE UNDERSCORE &kp SPACE &hl NUMBER_L
-Copy &hl NUMBER_L Copy  &hm RSHIFT SPACE &hl CODE MINUS &mpcaps RCTRL 0      &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
+&kp EQUAL &mlt MOUSE UNDERSCORE &kp SPACE &hl NUMBER_L
+Copy &hl NUMBER_L Copy  &mp RSHIFT SPACE &hl CODE MINUS &mpcaps RCTRL 0      &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -208,7 +224,7 @@ Copy &hl NUMBER_L Copy  &hm RSHIFT SPACE &hl CODE MINUS &mpcaps RCTRL 0      &kp
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C
 &kp  D        &kp  V      &hm LSHIFT Paste                                    &mpcaps RGUI 0 &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  UP
 &kp  LCTRL    &to  GAMING_L   &to COLEMK_L
-&kp EQUAL &hl MOUSE UNDERSCORE  &kp      SPACE &hl
+&kp EQUAL &mlt MOUSE UNDERSCORE  &kp      SPACE &hl
 NUMBER_L Copy &hl NUMBER_L Copy  &kp LSHIFT         &hl CODE MINUS &kp RCTRL           &kp  LEFT     &kp C_PLAY_PAUSE     &kp  RIGHT
                         >;
 
@@ -278,7 +294,7 @@ NUMBER_L Copy &hl NUMBER_L Copy  &kp LSHIFT         &hl CODE MINUS &kp RCTRL    
 &kp LT     &kp GT         &kp LPAR        &kp RPAR        &kp SEMI        &kp MINUS        &kp GRAVE                                            &kp BSLH       &kp COLON      &kp EQUAL       &kp COMMA     &kp DOT      &kp QUESTION    &kp PLUS
 &trans        &kp C_PLAY_PAUSE &kp AT
 &kp HASH     &kp MINUS &trans        &mo ADJ_L
-&mo ADJ_L      &hm RSHIFT SPACE   &kp UNDERSCORE     &trans                   &kp LT       &trans       &kp GT
+&mo ADJ_L      &mp RSHIFT SPACE   &kp UNDERSCORE     &trans                   &kp LT       &trans       &kp GT
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
