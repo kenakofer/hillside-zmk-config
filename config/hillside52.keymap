@@ -305,9 +305,9 @@
 /* NUMBER_L
  */
                         bindings = <
-&kp  TILDE    &kp LBRC      &kp LBKT        &kp RBKT      &kp RBRC    &kp PERCENT                                                                  &kp CARET        &kp AMPS         &kp ASTRK      &kp DOLLAR     &kp DQT      &trans
+&kp  TILDE    &kp LBRC      &kp LBKT        &kp RBKT      &kp RBRC    &kp PLUS                                                                  &kp CARET        &kp PIPE         &kp ASTRK      &kp DOLLAR     &kp DQT      &trans
 &trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                                                  &hm RGUI N6    &hm RCTRL N7   &hmf RSHIFT  N8 &kp N9   &hm RALT N0  &trans
-&kp LT     &kp GT         &kp LPAR        &kp RPAR        &kp SEMI        &kp EXCL        &kp GRAVE                                            &kp BSLH       &kp COLON      &kp EQUAL       &kp COMMA     &kp DOT      &kp MINUS    &kp PLUS
+&kp LT     &kp GT         &kp LPAR        &kp RPAR        &kp SEMI        &kp MINUS        &kp GRAVE                                            &kp BSLH       &kp COLON      &kp EQUAL       &kp COMMA     &kp DOT      &kp QUESTION    &kp PLUS
 &trans        &kp C_PLAY_PAUSE &kp AT                      &kp HASH     &kp MINUS &trans        &mo ADJ_L          &mo ADJ_L      &mp RSHIFT SPACE   &kp UNDERSCORE     &trans                   &kp LT       &trans       &kp GT
                         >;
 
