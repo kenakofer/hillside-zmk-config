@@ -155,12 +155,12 @@
             };
         hlf: homerow_layer_fast {
             compatible = "zmk,behavior-hold-tap";
-            retro-tap;  /* Trigger tap behavior if no other key was pressed while holding. This is fine for layer switch, but might not work well for mods. This makes a short tapping term more usable */
+            /*retro-tap; */ /* Trigger tap behavior if no other key was pressed(+released?) while holding. This is fine for layer switch, but might not work well for mods. This makes a short tapping term more usable */
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            require-prior-idle-ms = <50>;
+            tapping-term-ms = <400>;
+            require-prior-idle-ms = <0>;
             quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             bindings = <&mo>, <&kp>;
             };
         hm: homerow_mods {
@@ -175,8 +175,8 @@
         hmf: homerow_mods_fast {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <50>;
+            tapping-term-ms = <400>;
+            require-prior-idle-ms = <0>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
