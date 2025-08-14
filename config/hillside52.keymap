@@ -270,7 +270,7 @@
  */
                         bindings = <
 &kp  GRAVE    &trans      &kp W        &kp F      &kp COLON    &kp BSLH                                                    &trans        &kp LBRC         &kp RBRC      &kp DOLLAR     &kp DQT      &trans
-&trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                          &hm RGUI N6    &hm RCTRL N7   &hm RSHIFT  N8 &hl ADJ_L 9   &hm RALT N0  &trans
+&trans        &kp       N1  &kp       N2  &kp        N3 &kp        N4 &kp      N5                                          &hm RGUI N6    &hm RCTRL N7   &hm RSHIFT  N8 &hl ADJ_L N9   &hm RALT N0  &trans
 &kp LT     &kp GT         &kp LPAR        &kp RPAR        &kp SEMI        &kp LBKT        &trans                                            &trans       &kp RBKT      &kp EQUAL       &kp COMMA     &kp DOT      &kp QUESTION    &kp PLUS
 &trans        &kp C_PLAY_PAUSE &kp AT &trans     &trans &trans        &mo ADJ_L                                    &hl ADJ_L DOT      &mp RSHIFT SPACE   &kp MINUS     &kp PLUS                   &kp LT       &trans       &kp GT
                         >;
