@@ -2,64 +2,6 @@
 import re
 
 
-def parse_row(line):
-    return ["&" + part.strip() for part in line.split("&") if part.strip()]
-
-
-def get_widths(rows):
-    widths = [0] * max(len(r) for r in rows)
-    for row in rows:
-        for i, cell in enumerate(row):
-            widths[i] = max(widths[i], len(cell))
-    return widths
-
-
-def format_layer(layer_lines):
-    # Extract pure key binding lines
-    key_lines = [line.strip() for line in layer_lines if "&" in line]
-
-    # Skip if it's not a standard 4-row layer
-    if len(key_lines) != 4:
-        return layer_lines
-
-    rows = [parse_row(line) for line in key_lines]
-
-    # Split alpha rows for separate formatting
-    left_rows = [rows[i][:6] for i in range(3)]
-    right_rows = [rows[i][6:] for i in range(3)]
-    thumb_row = rows[3]
-
-    left_widths = get_widths(left_rows)
-    right_widths = get_widths(right_rows)
-    thumb_widths = get_widths([thumb_row])
-
-    formatted_lines = []
-    for i in range(3):
-        left = " ".join(
-            left_rows[i][j].ljust(left_widths[j]) for j in range(len(left_rows[i]))
-        )
-        right = " ".join(
-            right_rows[i][j].ljust(right_widths[j]) for j in range(len(right_rows[i]))
-        )
-        formatted_lines.append(f"        {left}    {right}")
-
-    formatted_lines.append(
-        " ".join(thumb_row[i].ljust(thumb_widths[i]) for i in range(len(thumb_row)))
-    )
-
-    # Re-integrate with comments and blank lines
-    final_block = []
-    key_line_idx = 0
-    for line in layer_lines:
-        if "&" in line:
-            if key_line_idx < len(formatted_lines):
-                final_block.append(formatted_lines[key_line_idx])
-                key_line_idx += 1
-        else:
-            final_block.append(line)
-    return final_block
-
-
 def main():
     input_file = "config/hillside52.keymap"
     with open(input_file, "r") as f:
@@ -124,9 +66,9 @@ def main():
             line = ""
             for x in range(16):
                 if cells[y][x] != "":
-                    line += "&" + cells[y][x].ljust(column_width) + " "
+                    line += "&" + cells[y][x].ljust(column_width)
                 else:
-                    line += " " * (column_width + 2)
+                    line += " " * (column_width + 1)
             formatted_lines.append(line.rstrip())
 
         # Replace original with formatted content
