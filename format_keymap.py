@@ -44,8 +44,7 @@ def format_layer(layer_lines):
         formatted_lines.append(f"        {left}    {right}")
 
     formatted_lines.append(
-        "        "
-        + " ".join(thumb_row[i].ljust(thumb_widths[i]) for i in range(len(thumb_row)))
+        " ".join(thumb_row[i].ljust(thumb_widths[i]) for i in range(len(thumb_row)))
     )
 
     # Re-integrate with comments and blank lines
@@ -70,6 +69,25 @@ def main():
     layer_regex = r"bindings = <([^>]+)>;\n\s*sensor-bindings"
     matches = re.finditer(layer_regex, content, re.DOTALL)
 
+    # First Pass: Collect all cells to determine max width
+    column_width = 0
+    longest = []
+    for match in matches:
+        layer_content = match.group(1)
+        layer_amps = layer_content.strip().split("&")
+        pop = layer_amps.pop(0)
+        assert len(layer_amps) == 52
+
+        for amp in layer_amps:
+            amp = " ".join(amp.split())
+            if column_width < len(amp):
+                column_width = len(amp)
+                longest = [amp]
+            elif column_width == len(amp):
+                longest.append(amp)
+    print("Longest entries:", longest)
+
+    # Second Pass: Reformat layers
     new_content = content
     for match in reversed(list(matches)):
         layer_content = match.group(1)
@@ -82,33 +100,43 @@ def main():
         #     assert pop == ""
         assert len(layer_amps) == 52
 
-        cells = ["" for i in range(14)] for j in
-        range(4)]
+        cells = [["" for i in range(16)] for j in range(4)]
 
-        skip_before = [6, 6, 18, 18, 30]
+        skip_before = [6, 6, 18, 18, 31]
         break_before = [12, 24, 37]
 
-        (x,y) = (0,0)
-        for (c, i) in enumerate(layer_amps):
+        (x, y) = (0, 0)
+        for i, c in enumerate(layer_amps):
             c = " ".join(c.split())
-            while i == skip_before[0]:
+            while skip_before and i == skip_before[0]:
                 skip_before.pop(0)
-                x += 1
-            while i == break_before[0]:
+                x += 2
+            while break_before and i == break_before[0]:
                 break_before.pop(0)
                 y += 1
                 x = 0
             cells[y][x] = c
             x += 1
 
+        formatted_lines = []
+        for y in range(4):
+            line = ""
+            for x in range(16):
+                if cells[y][x] != "":
+                    line += "&" + cells[y][x].ljust(column_width) + " "
+                else:
+                    line += " " * (column_width + 2)
+            formatted_lines.append(line.rstrip())
 
-        # layer_lines = layer_content.strip().split('\n')
-        #
-        # formatted_lines = format_layer(layer_lines)
-        #
-        # # Replace original with formatted content
-        # start, end = match.span(1)
-        # new_content = new_content[:start] + "\n" + "\n".join(formatted_lines) + "\n    " + new_content[end:]
+        # Replace original with formatted content
+        start, end = match.span(1)
+        new_content = (
+            new_content[:start]
+            + "\n"
+            + "\n".join(formatted_lines)
+            + "\n    "
+            + new_content[end:]
+        )
 
     with open(input_file, "w") as f:
         f.write(new_content)
