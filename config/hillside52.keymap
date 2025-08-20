@@ -279,7 +279,7 @@
 /* MOUSE
  */
                         bindings = <
-&kp BSPC        &kp C_BRI_DN    &kp C_VOL_DN    &kp C_VOL_UP    &kp C_BRI_UP    &win_up                                                                         &win_down       &mmv LEFT_SLOW  &mmv MV_U_SLOW  &mmv DOWN_SLOW  &mmv RIGHT_SLOW &trans
+&kp BSPC        &kp C_BRI_DN    &kp C_VOL_DN    &kp C_VOL_UP    &kp C_BRI_UP    &win_up                                                                         &win_down       &mmv LEFT_SLOW  &mmv UP_SLOW  &mmv DOWN_SLOW  &mmv RIGHT_SLOW &trans
 &kp ENTER       &mkp RCLK       &msc SCRL_UP    &msc SCRL_DOWN  &mkp LCLK       &win_move                                                                       &mkp LCLK       &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
 &kp DEL         &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT &win_resize     &trans                                          &kp RALT        &trans          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT
 &trans          &trans          &kp C_PLAY_PAUSE&trans          &trans          &trans          &trans          &trans          &trans          &kp RSHIFT      &mo MOUSE       &kp RCTRL       &trans          &trans          &trans
