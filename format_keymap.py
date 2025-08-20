@@ -88,6 +88,7 @@ def main():
     print("Longest entries:", longest)
 
     # Second Pass: Reformat layers
+    matches = re.finditer(layer_regex, content, re.DOTALL)
     new_content = content
     for match in reversed(list(matches)):
         layer_content = match.group(1)
@@ -137,6 +138,8 @@ def main():
             + "\n    "
             + new_content[end:]
         )
+
+        print("Reformatted a layer")
 
     with open(input_file, "w") as f:
         f.write(new_content)
