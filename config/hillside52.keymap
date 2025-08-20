@@ -48,7 +48,7 @@
 
 #define U_MOUSE_MOVE_SLOW_MAX 500                     /* <--- New max speed setting (default: 600) */
 #define UP_SLOW MOVE_Y(-U_MOUSE_MOVE_SLOW_MAX)
-#define MOVE_DOWN_SLOW MOVE_Y(U_MOUSE_MOVE_SLOW_MAX)
+#define DOWN_SLOW MOVE_Y(U_MOUSE_MOVE_SLOW_MAX)
 #define LEFT_SLOW MOVE_X(-U_MOUSE_MOVE_SLOW_MAX)
 #define RIGHT_SLOW MOVE_X(U_MOUSE_MOVE_SLOW_MAX)
 
