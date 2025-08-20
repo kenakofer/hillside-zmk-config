@@ -45,15 +45,15 @@ def main():
 
         cells = [["" for i in range(16)] for j in range(4)]
 
-        skip_before = [6, 6, 18, 18, 31]
-        break_before = [12, 24, 37]
+        skip_before = [6, 6, 6, 6, 18, 18, 18, 18, 31, 31, 41, 49]
+        break_before = [12, 24, 38]
 
         (x, y) = (0, 0)
         for i, c in enumerate(layer_amps):
             c = " ".join(c.split())
             while skip_before and i == skip_before[0]:
                 skip_before.pop(0)
-                x += 2
+                x += 1
             while break_before and i == break_before[0]:
                 break_before.pop(0)
                 y += 1
