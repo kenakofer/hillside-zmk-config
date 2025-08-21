@@ -16,6 +16,8 @@ def main():
     longest = []
     for match in matches:
         layer_content = match.group(1)
+        layer_content = re.sub(r"^\s*//.*$", "", layer_content, flags=re.MULTILINE)
+
         layer_amps = layer_content.strip().split("&")
         pop = layer_amps.pop(0)
         assert len(layer_amps) == 52
@@ -34,6 +36,7 @@ def main():
     new_content = content
     for match in reversed(list(matches)):
         layer_content = match.group(1)
+        layer_content = re.sub(r"^\s*//.*$", "", layer_content, flags=re.MULTILINE)
 
         layer_amps = layer_content.strip().split("&")
         pop = layer_amps.pop(0)
@@ -71,12 +74,49 @@ def main():
                     line += " " * (column_width + 1)
             formatted_lines.append(line.rstrip())
 
+        # Add // comment lines with box drawing characters, including T characters
+        comment_lines = ["//" + "─" * (column_width - 1) for _y in range(5)]
+        comment_lines[0] += ""
+        for x in range(5):
+            comment_lines[0] += "┬" + "─" * (column_width)
+        comment_lines[0] += "┐"
+        comment_lines[0] += " " * (column_width * 4 + 3)
+        # Second grouping, opposite of "┐"
+        comment_lines[0] += "┌" + "─" * (column_width)
+        for x in range(5):
+            comment_lines[0] += "┬" + "─" * (column_width)
+        comment_lines[0] += "┐"
+
+        comment_lines[1] = (
+            comment_lines[0].replace("┬", "┼").replace("┐", "┤").replace("┌", "├")
+        )
+
+        # Third comment line needs to accommodate the 6 above and 7 below
+        comment_lines[2] = comment_lines[1]
+        # comment_lines[4] = (
+        #     comment_lines[0].replace("┬", "┴").replace("┐", "┘").replace("┌", "└")
+        # )
+        for x in range(15):
+            comment_lines[4] += "┴" + "─" * (column_width)
+        comment_lines[4] += "┘"
+
+        comment_lines[3] = (
+            comment_lines[4].replace("┴", "┼").replace("┘", "┤").replace("└", "├")
+        )
+
+        # Interleave the 5 comment lines with the 4 formatted lines
+        interleaved_lines = []
+        for y in range(4):
+            interleaved_lines.append(comment_lines[y])
+            interleaved_lines.append(formatted_lines[y])
+        interleaved_lines.append(comment_lines[4])
+
         # Replace original with formatted content
         start, end = match.span(1)
         new_content = (
             new_content[:start]
             + "\n"
-            + "\n".join(formatted_lines)
+            + "\n".join(interleaved_lines)
             + "\n    "
             + new_content[end:]
         )
