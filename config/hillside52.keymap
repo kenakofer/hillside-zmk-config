@@ -137,10 +137,19 @@
 		};
 	};
         behaviors {
+        hlf: homerow_layer_fast {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            require-prior-idle-ms = <0>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            };
         hl: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             require-prior-idle-ms = <0>;
             quick-tap-ms = <0>;
             flavor = "balanced";
@@ -149,7 +158,7 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             require-prior-idle-ms = <0>;
             quick-tap-ms = <0>;
             flavor = "balanced";
@@ -191,7 +200,7 @@
 //──────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐                                                               ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
 &kp ESC         &kp Q           &kp W           &kp F           &kp P           &kp B                                                                           &kp J           &kp L           &kp U           &kp Y           &kp SQT         &kp BSPC
 //──────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                                                               ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-&kp TAB         &hm LALT A      &hl CODE R      &hm LSHIFT S    &hm LCTRL T     &hm LGUI G                                                                      &hm LGUI M      &hm RCTRL N     &hm RSHIFT E    &hl NUM_L I     &hm RALT O      &kp ENTER
+&kp TAB         &hm LALT A      &hl CODE R      &hm LSHIFT S    &hm LCTRL T     &hm LGUI G                                                                      &hm LGUI M      &hm RCTRL N     &hm RSHIFT E    &hlf NUM_L I    &hm RALT O      &kp ENTER
 //──────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                                                               ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 &kp DEL         &kp Z           &kp X           &kp C           &kp D           &kp V           &hm LSHIFT Paste                                &kp LGUI        &kp K           &kp H           &kp COMMA       &kp DOT         &kp SLASH       &kp PLUS
 //──────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
@@ -299,7 +308,7 @@
 //──────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐                                                               ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
 &kp GRAVE       &trans          &kp W           &kp F           &kp LBKT        &kp BSLH                                                                        &kp J           &kp RBKT        &trans          &trans          &kp SQT         &trans
 //──────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                                                               ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-&trans          &kp N1          &hl CODE N2     &kp N3          &kp N4          &kp N5                                                                          &hm LGUI N6     &hm RCTRL N7    &hm RSHIFT N8   &hl ADJ_L N9    &hm RALT N0     &trans
+&trans          &kp N1          &hl CODE N2     &kp N3          &kp N4          &kp N5                                                                          &hm LGUI N6     &hm RCTRL N7    &hm RSHIFT N8   &hlf ADJ_L N9   &hm RALT N0     &trans
 //──────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                                                               ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 &kp LT          &kp GT          &kp LPAR        &kp RPAR        &kp SEMI        &kp V           &trans                                          &trans          &trans          &kp EQUAL       &kp COMMA       &kp DOT         &kp SLASH       &kp PLUS
 //──────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
