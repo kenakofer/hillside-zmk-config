@@ -14,7 +14,9 @@
 #include <behaviors/mouse_keys.dtsi>
 
 #include <dt-bindings/zmk/kscan_mock.h>
-#include <dt-bindings/zmk/dynamic_macro.h>
+
+#include <dt-bindings/zmk/dynamic_macros.h>
+#include <behaviors/dynamic_macro.dtsi>
 
 #define USCR UNDERSCORE
 #define POWER ext_power
@@ -385,7 +387,7 @@
 //──────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤                                                               ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 &none           &sys_reset      &none           &out OUT_USB    &none           &none           &bt BT_CLR                                      &none           &none           &none           &none           &none           &none           &trans
 //──────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-&dm DM_PLY 0    &dm DM_STP 0    &dm DM_REC 0                    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp CAPSLOCK                    &kp RCTRL       &none           &none
+&dm DM_REC 0    &dm DM_STP 0    &dm DM_SLOT_RAM 0               &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp CAPSLOCK                    &kp RCTRL       &none           &none
 //──────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
     >;
 

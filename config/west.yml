@@ -2,13 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: kenakofer
-      url-base: https://github.com/kenakofer
-      
+    - name: benjaminciq
+      url-base: https://github.com/BenjaminCIQ
+
   projects:
     - name: zmk
-      remote: kenakofer
-      revision: main
+      remote: zmkfirmware
+      revision: v0.3
       import: app/west.yml
+    - name: zmk-dynamic-macros
+      remote: benjaminciq
+      revision: v0.3
   self:
     path: config
