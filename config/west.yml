@@ -6,12 +6,15 @@ manifest:
       url-base: https://github.com/BenjaminCIQ
 
   projects:
+    # Both pinned to main: zmk-dynamic-macros uses ZMK_KEYMAP_LAYERS_FOREACH,
+    # which landed after the v0.3 release and only exists on ZMK main. The
+    # module's own CI tests against zmk-version: main for the same reason.
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
     - name: zmk-dynamic-macros
       remote: benjaminciq
-      revision: v0.3
+      revision: main
   self:
     path: config
