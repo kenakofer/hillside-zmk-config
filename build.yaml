@@ -14,7 +14,12 @@
 ---
 include:
 # Hillside 52
+  # Logging is on the left half only: it is the split central, so hold-tap
+  # decisions happen there, and it is the half plugged into USB.
+  # DIAGNOSTIC ONLY -- drop the snippet line (and the log config in
+  # hillside52.conf) once hold-tap tuning is done. It costs battery life.
   - board: nice_nano//zmk
     shield: hillside52_left
+    snippet: zmk-usb-logging
   - board: nice_nano//zmk
     shield: hillside52_right
