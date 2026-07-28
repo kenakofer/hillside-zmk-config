@@ -1,3 +1,5 @@
 firmware/firmware.zip
-firmware/hillside52_left-nice_nano_v2-zmk.uf2
-firmware/hillside52_right-nice_nano_v2-zmk.uf2
+firmware/hillside52_left-nice_nano__zmk-zmk.uf2
+firmware/hillside52_right-nice_nano__zmk-zmk.uf2
+__pycache__/
+nvim-verbose.log
